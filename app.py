@@ -3,6 +3,10 @@ from pyXSteam.XSteam import XSteam
 
 app = Flask(__name__)
 
+@app.route('/')
+def home():
+    return "Welcome to the Enthalpy Calculation API!"
+
 @app.route('/enthalpy', methods=['POST'])
 def calculate_enthalpy():
     try:
